@@ -1,0 +1,58 @@
+@import "mixins/fontFace"
+@import "mixins/clearfix"
+@import "variables"
+
+$fontFace("/font/", lato-regular, "Lato-Regular")
+resets()
+
+/*
+* Extend some class manually as @extends does not work in .vue files
+*/
+
+body, 
+html,
+.Main
+  $clearfix()
+  
+.Main,
+.Landing,
+.Landing_s
+  width 100%
+  height 100%
+  display block
+  position relative
+
+/*
+* End extend
+*/
+
+html
+  box-sizing border-box
+
+*, 
+*:before, 
+*:after
+  box-sizing inherit
+  
+body, 
+html 
+  overflow hidden
+
+body, 
+html
+  position static
+  width 100%
+  height 100%
+  display block
+ 
+body
+  font-size $fontS
+  line-height $lineH
+  font-family "Lato"
+  font-style normal
+  font-weight 400
+  color white
+  background $red
+  
+a
+  color white
